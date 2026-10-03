@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>INSTA_LITE — Settings</title>
+    <link rel="stylesheet" href="ui.css" />
+    <script src="core.js" defer></script>
+    <script src="ui.js" defer></script>
+  </head>
+  <body class="options">
+    <main class="shell">
+      <header>
+        <span class="logo" aria-hidden="true">i.</span>
+        <div>
+          <div class="wordmark">INSTA_LITE</div>
+          <div class="tagline">Instagram, without the scroll.</div>
+        </div>
+        <span class="version">v1.0</span>
+      </header>
+      <div class="status">
+        <div>
+          <div class="eyebrow">Your attention, your rules</div>
+          <h1 class="lead" id="focus-title">Loading your settings…</h1>
+          <p class="muted" id="focus-help">One moment.</p>
+        </div>
+      </div>
+      <div class="settings-grid">
+        <section class="panel wide">
+          <div class="row">
+            <h2>Distraction blocker</h2>
+            <label class="switch"
+              ><span>On</span
+              ><input id="enabled" type="checkbox" aria-label="Enable distraction blocker"
+            /></label>
+          </div>
+          <p class="help">
+            Feed, Reels, Explore and stories redirect to your inbox. Login and account recovery
+            remain available.
+          </p>
+          <a
+            class="primary"
+            href="https://www.instagram.com/direct/inbox/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open Messages ↗</a
+          >
+        </section>
+        <section class="panel">
+          <h2>How do you want to connect?</h2>
+          <div class="segmented">
+            <label class="choice"
+              ><input type="radio" name="mode" value="react" />Read + React</label
+            ><label class="choice"
+              ><input type="radio" name="mode" value="full" />Full Messaging</label
+            >
+          </div>
+          <p class="help">
+            Read + React hides message composers. Reactions stay on Instagram. This is a focus aid;
+            Instagram interface changes can affect it.
+          </p>
+          <div class="row" style="margin-top: 14px">
+            <label for="hide-shared">Hide shared post &amp; reel links</label
+            ><input type="checkbox" id="hide-shared" />
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-head">
+            <h2>A moment to focus</h2>
+            <span class="eyebrow">Timer</span>
+          </div>
+          <p id="clock" class="clock" aria-live="off">Ready when you are</p>
+          <div class="timer-controls">
+            <label class="caption" for="duration">Duration</label
+            ><select id="duration">
+              <option value="15">15 min</option>
+              <option value="25" selected>25 min</option>
+              <option value="45">45 min</option></select
+            ><button disabled type="button" class="secondary" id="timer-start">Start focus</button
+            ><button disabled type="button" class="secondary" id="timer-end" hidden>
+              Clear timer
+            </button>
+          </div>
+          <p class="help">Ends with a badge and an inbox reminder. It does not lock you out.</p>
+        </section>
+        <section class="panel wide">
+          <div class="panel-head">
+            <h2>Today, on this device</h2>
+            <span class="eyebrow">Local stats</span>
+          </div>
+          <div class="stats">
+            <div>
+              <p class="number" id="blocked">0</p>
+              <p class="caption">Distractions redirected</p>
+            </div>
+            <div>
+              <p class="number" id="minutes">0</p>
+              <p class="caption">Active inbox minutes</p>
+            </div>
+          </div>
+          <p class="help">
+            Inbox time counts while this tab is visible, focused and recently active. No estimated
+            “time saved.”
+          </p>
+        </section>
+        <section class="panel wide">
+          <div class="row">
+            <label for="theme">INSTA_LITE appearance</label
+            ><select id="theme">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <p class="help">Changes these controls. Instagram keeps its own appearance.</p>
+        </section>
+        <section class="panel wide">
+          <div class="panel-head">
+            <h2>Last 30 days</h2>
+            <button disabled type="button" class="secondary danger" id="reset">
+              Clear statistics
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table class="history">
+              <thead>
+                <tr>
+                  <th scope="col">Day (local)</th>
+                  <th scope="col">Redirects</th>
+                  <th scope="col">Inbox time</th>
+                </tr>
+              </thead>
+              <tbody id="history"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="privacy wide">
+          <h2>Your login stays with Instagram.</h2>
+          <p>
+            INSTA_LITE has no server, analytics or tracking. It does not collect your password or
+            store your messages. Preferences, timer and 30 days of counters are saved in this
+            browser. Instagram still handles and stores your account and conversations.
+          </p>
+          <p>
+            Permissions: Instagram pages for redirects and interface controls; local storage for
+            preferences and counts; alarms for the timer. It never uses Instagram’s private API.
+          </p>
+          <p>
+            Works in desktop Chrome and Edge. It does not change the Instagram mobile app. If a
+            composer or distracting panel appears after an Instagram update, stop using the
+            restrictive mode and report the page layout (without private messages).
+          </p>
+          <p>Independent project. Not affiliated with or endorsed by Instagram or Meta.</p>
+        </section>
+      </div>
+      <p id="notice" class="notice" role="status" aria-live="polite"></p>
+      <footer class="footer">
+        <span>Made for conversations, not consumption.</span
+        ><a
+          href="https://github.com/Rishikeshsanin/INSTA_LITE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Source ↗</a
+        >
+      </footer>
+    </main>
+    <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+      <h2 id="reset-title">Clear your statistics?</h2>
+      <p id="reset-description">
+        This deletes the last 30 days of counters from this browser. Your settings and timer stay.
+      </p>
+      <div class="dialog-actions">
+        <button disabled type="button" class="secondary" id="reset-cancel">Keep statistics</button
+        ><button disabled type="button" class="secondary danger" id="reset-confirm">
+          Clear statistics
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>

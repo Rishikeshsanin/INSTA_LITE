@@ -1,0 +1,49 @@
+name: Bug or Instagram layout change
+description: Report a reproducible issue without sharing private account data.
+title: '[Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not include passwords, cookies, access tokens, account exports, or private messages. Crop or redact screenshots before attaching them.'
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and extension versions
+      placeholder: Chrome 153, INSTA_LITE 1.0.0, Windows 11
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Instagram interface language
+      placeholder: English
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Messaging mode
+      options: [Read + React, Full Messaging, Focus disabled]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use generic page types or redacted paths; do not paste conversation IDs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Before submitting
+      options:
+        - label: I refreshed Instagram after installing or reloading the extension.
+        - label: This report contains no credentials or private conversation contents.
+          required: true

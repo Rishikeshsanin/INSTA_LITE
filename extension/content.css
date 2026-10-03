@@ -1,0 +1,18 @@
+html.il-route-guard body {
+  visibility: hidden !important;
+}
+html.il-focus [data-il-hidden] {
+  display: none !important;
+}
+html.il-react [data-il-composer] {
+  display: none !important;
+}
+html.il-hide-shared [data-il-shared] {
+  display: none !important;
+}
+#instalite-root {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+}

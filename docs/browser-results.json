@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "Website loads with real download link and labelled fictional demo",
+    "Demo reactions toggle and conversation switching works",
+    "FAQ and extension ZIP download work",
+    "Clipboard action provides success or useful fallback",
+    "360px website has no horizontal overflow",
+    "Privacy page navigation works",
+    "Website and privacy pass axe WCAG A/AA checks",
+    "Settings: messaging mode, light/dark appearance, start/clear timer",
+    "Reset dialog supports focus placement, Escape, confirmation and empty history",
+    "Failed settings save restores prior state and displays inline error",
+    "Narrow settings and native keyboard selects remain usable",
+    "Settings fixture passes axe WCAG A/AA checks",
+    "Direct fixture hides distractions and composer while preserving search and native reaction control",
+    "Mutation observer hides dynamically added composers",
+    "Full Messaging restores composer and disabling focus restores native UI",
+    "SPA navigation to Explore redirects to inbox",
+    "No browser JavaScript errors in verified workflows"
+  ],
+  "consoleErrors": [],
+  "accessibility": [
+    {
+      "url": "http://localhost:4173",
+      "violations": []
+    },
+    {
+      "url": "http://localhost:4173/privacy.html",
+      "violations": []
+    },
+    {
+      "url": "options fixture",
+      "violations": []
+    }
+  ]
+}

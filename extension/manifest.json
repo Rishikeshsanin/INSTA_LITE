@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "INSTA_LITE — Instagram, without the scroll",
+  "version": "1.0.0",
+  "description": "Keep Instagram messages. Block the feed, reels, stories and Explore. Local settings, focus timer, and optional Read + React mode.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "declarativeNetRequest", "alarms"],
+  "host_permissions": ["https://www.instagram.com/*", "https://instagram.com/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "INSTA_LITE",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*", "https://instagram.com/*"],
+      "js": ["core.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{ "id": "focus_routes", "enabled": true, "path": "rules.json" }]
+  },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'" }
+}

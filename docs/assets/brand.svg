@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="430" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc">
+<title id="title">INSTA_LITE — Instagram, without the scroll.</title><desc id="desc">A violet correspondence-themed banner with a small inbox icon, the project name, and the words Messages in. Distractions out.</desc>
+<rect width="1280" height="430" rx="26" fill="#f4f5fa"/>
+<rect x="66" y="60" width="55" height="55" rx="17" fill="#6551cf"/>
+<text x="80" y="98" fill="white" font-family="Arial,sans-serif" font-weight="700" font-size="34">i.</text>
+<text x="139" y="98" fill="#242138" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="-1">INSTA_LITE</text>
+<text x="67" y="211" fill="#242138" font-family="Arial,sans-serif" font-size="65" font-weight="700" letter-spacing="-2">Instagram, without the</text>
+<text x="67" y="284" fill="#6551cf" font-family="Arial,sans-serif" font-size="65" font-weight="700" letter-spacing="-2">scroll.</text>
+<path d="M60 263 Q154 244 252 256" stroke="#a597e9" stroke-width="8" fill="none" stroke-linecap="round"/>
+<text x="69" y="354" fill="#625e74" font-family="Arial,sans-serif" font-size="22">Messages in. Distractions out.</text>
+<g transform="translate(920 82)"><rect width="280" height="267" rx="22" fill="white" stroke="#d9d5e5"/><path d="M0 57H280" stroke="#d9d5e5"/><circle cx="25" cy="29" r="5" fill="#6551cf"/><text x="42" y="34" fill="#242138" font-family="Arial,sans-serif" font-size="15" font-weight="700">Just messages.</text><rect x="23" y="82" width="194" height="42" rx="13" fill="#eeeafa"/><rect x="23" y="138" width="160" height="42" rx="13" fill="#f4f5fa"/><path d="M44 219l8 8 15-18" stroke="#286b54" stroke-width="4" fill="none" stroke-linecap="round"/><text x="83" y="225" fill="#625e74" font-family="Arial,sans-serif" font-size="14">Your inbox stays.</text></g>
+</svg>

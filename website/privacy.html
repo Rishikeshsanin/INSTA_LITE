@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Privacy — INSTA_LITE</title>
+    <meta
+      name="description"
+      content="How INSTA_LITE stores local settings and counters and keeps Instagram login on Instagram."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icon.png" />
+  </head>
+  <body>
+    <header class="nav wrap">
+      <a href="index.html" class="brand"
+        ><span class="logo" aria-hidden="true">i.</span>INSTA_LITE</a
+      ><a href="index.html#install" class="text-link">Back to installation ↗</a>
+    </header>
+    <main class="privacy-page wrap">
+      <p class="eyebrow">Version 1.0.0 · October 2026</p>
+      <h1>Your inbox is yours.</h1>
+      <p>
+        INSTA_LITE is an independent browser extension that modifies the Instagram website on your
+        computer. It has no account service or extension backend.
+      </p>
+      <h2>What stays in your browser</h2>
+      <p>
+        The extension stores your enabled setting, messaging mode, shared-link preference,
+        appearance preference, focus timer and daily counters in <code>chrome.storage.local</code>.
+        Counters contain dates, the number of redirected visits and active inbox seconds. They are
+        retained for 30 local calendar days.
+      </p>
+      <p>
+        Clear counters from All settings. Removing the extension removes its local data. Your data
+        is not synced by this extension.
+      </p>
+      <h2>What the extension does on Instagram</h2>
+      <p>
+        It checks navigation URLs and page elements to redirect distractions, hide navigation and
+        optionally hide composers. It does not collect passwords, copy message bodies, store
+        conversations or call Instagram’s private API. The code does not send analytics or data to
+        an external service.
+      </p>
+      <h2>Your Instagram account</h2>
+      <p>
+        You sign in directly on instagram.com. Instagram handles your credentials, cookies,
+        conversations and reactions under its own policies. INSTA_LITE does not remove Instagram’s
+        tracking or change its data practices.
+      </p>
+      <h2>Permissions</h2>
+      <ul>
+        <li>Instagram host access: redirects and local page layout changes.</li>
+        <li>Declarative network request: redirect distracting page visits.</li>
+        <li>Local storage: preferences, timer and counters.</li>
+        <li>Alarms: timer completion and badge updates.</li>
+      </ul>
+      <h2>This website</h2>
+      <p>
+        The companion website includes no analytics, external fonts or tracking scripts. Its inbox
+        preview uses fictional messages and does not connect to Instagram. Your hosting provider may
+        process ordinary request logs.
+      </p>
+      <h2>Compatibility and control</h2>
+      <p>
+        This is a focus aid, not a security control. Instagram may change its layout or features.
+        Turn off the distraction blocker or remove the extension at any time. Report compatibility
+        issues in the GitHub repository without including credentials or private conversation
+        contents.
+      </p>
+      <p>
+        <a href="downloads/INSTA_LITE-source-v1.0.0.zip" download>Download the source code ↓</a>
+      </p>
+      <p>
+        <a
+          href="https://github.com/Rishikeshsanin/INSTA_LITE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open the project repository ↗</a
+        >
+      </p>
+      <p>Not affiliated with or endorsed by Instagram or Meta.</p>
+    </main>
+  </body>
+</html>

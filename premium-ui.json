@@ -1,0 +1,11 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["extension", "website"],
+  "locale": "en",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Form", "Select/Listbox", "Scrollbar", "Toast"],
+  "ownership": { "Select/Listbox": "native" },
+  "requiredCommands": ["unit", "check", "build"],
+  "commands": { "unit": "npm test", "check": "npm run check", "build": "npm run build" },
+  "evidence": { "failurePaths": "tests/background.test.mjs" }
+}

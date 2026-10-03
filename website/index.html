@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Instagram, without the scroll. A free desktop Chrome and Edge extension that keeps your inbox and blocks feed, reels, stories and Explore."
+    />
+    <meta name="theme-color" content="#f4f5fa" />
+    <title>INSTA_LITE — Instagram, without the scroll.</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav wrap">
+      <a href="#main" class="brand" aria-label="INSTA_LITE home"
+        ><span class="logo" aria-hidden="true">i.</span>INSTA_LITE</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#how">How it works</a><a href="#questions">Questions</a
+        ><a
+          href="https://github.com/Rishikeshsanin/INSTA_LITE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub ↗</a
+        >
+      </nav>
+      <a href="#install" class="button small"
+        >Get the extension <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span>Made for your desktop inbox</div>
+          <h1>
+            Instagram,<br />without the<br /><span class="crossed"
+              >scroll.<svg viewBox="0 0 340 30" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M6 22 Q150 -4 330 12" /></svg
+            ></span>
+          </h1>
+          <p class="intro">Keep the conversations.<br />Leave the rabbit holes.</p>
+          <p class="description">
+            Your real Instagram messages. No feed, no Reels, no Explore. A small browser extension
+            that puts your attention back in your hands.
+          </p>
+          <div class="hero-actions">
+            <a href="downloads/INSTA_LITE-extension-v1.0.0.zip" download class="button"
+              >Download for Chrome / Edge <span aria-hidden="true">↓</span></a
+            ><a href="#install" class="text-link">Installation guide ↗</a>
+          </div>
+          <p class="fine">Free &amp; open source · No signup · Desktop only</p>
+        </div>
+        <div class="hero-visual">
+          <div class="annotation top-note">the part you came for ↓</div>
+          <div class="inbox-demo">
+            <div class="demo-title">
+              <span class="demo-logo">i.</span><span>Just messages.</span
+              ><span class="demo-light"></span>
+            </div>
+            <div class="demo-layout">
+              <aside class="demo-sidebar">
+                <div class="demo-profile">
+                  <span class="avatar me">Y</span>
+                  <div>You<small>A little more present.</small></div>
+                </div>
+                <div class="demo-label">Messages <span>3</span></div>
+                <div class="demo-chats" role="group" aria-label="Example conversations">
+                  <button disabled class="chat active" data-chat="0" aria-pressed="true">
+                    <span class="avatar a1">A</span
+                    ><span><strong>Arjun</strong><small>coffee after class?</small></span
+                    ><span class="unread"></span></button
+                  ><button disabled class="chat" data-chat="1" aria-pressed="false">
+                    <span class="avatar a2">M</span
+                    ><span><strong>Maya</strong><small>look what I made :)</small></span></button
+                  ><button disabled class="chat" data-chat="2" aria-pressed="false">
+                    <span class="avatar a3">S</span
+                    ><span><strong>Study group</strong><small>see you in the library</small></span>
+                  </button>
+                </div>
+                <div class="no-scroll">
+                  <span aria-hidden="true">⊘</span> Feed &amp; Reels stay outside.
+                </div>
+              </aside>
+              <div class="demo-thread">
+                <div class="thread-header">
+                  <span class="avatar a1" id="thread-avatar">A</span
+                  ><span id="thread-name">Arjun</span><span class="quiet-label">INBOX ONLY</span>
+                </div>
+                <div class="thread-messages">
+                  <div class="day">Today</div>
+                  <div class="bubble" id="message-one">hey! coffee after class?</div>
+                  <div class="bubble" id="message-two">the usual place? ☕</div>
+                  <div class="reaction" id="reaction" hidden>❤️</div>
+                  <p class="demo-reaction-help">A reaction says enough.</p>
+                  <div class="reactions" role="group" aria-label="React to demo message">
+                    <button disabled aria-label="React with heart" aria-pressed="false">❤️</button
+                    ><button disabled aria-label="React with laughing face" aria-pressed="false">
+                      😂</button
+                    ><button disabled aria-label="React with thumbs up" aria-pressed="false">
+                      👍
+                    </button>
+                  </div>
+                </div>
+                <div class="thread-footer">
+                  <span class="status-dot"></span> Read + React mode
+                  <span aria-hidden="true">♡</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="annotation bottom-note">connected, not consumed.</div>
+          <p class="demo-disclaimer" id="demo-status" role="status">
+            Interactive demo · example messages, no Instagram connection
+          </p>
+        </div>
+      </section>
+      <section class="boundaries wrap" aria-label="Included and blocked features">
+        <div><span class="yes">✓</span><span>Real conversations</span></div>
+        <div><span class="yes">✓</span><span>Message reactions</span></div>
+        <div><span class="no">×</span><span>Endless feed</span></div>
+        <div><span class="no">×</span><span>Reels &amp; Explore</span></div>
+        <div><span class="no">×</span><span>Story detours</span></div>
+      </section>
+      <section class="intent wrap" id="how">
+        <div class="section-intro">
+          <p class="eyebrow">Same Instagram. Different intention.</p>
+          <h2>You came to say hi.<br />Stay for <em>that.</em></h2>
+          <p>
+            The extension works inside Instagram’s website. Your account, your messages and your
+            login stay right where they belong.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <span class="feature-icon" aria-hidden="true">↗</span>
+            <h3>A direct route to people.</h3>
+            <p>
+              Open Instagram and land in your inbox. Feed, Reels, Explore, stories and profile
+              detours redirect back to messages.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-icon" aria-hidden="true">♡</span>
+            <h3>Your kind of connected.</h3>
+            <p>
+              Read + React hides composers for quieter check-ins. Switch to Full Messaging when you
+              want to reply, share or catch up.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-icon" aria-hidden="true">◷</span>
+            <h3>A little stopping point.</h3>
+            <p>
+              Start a 15, 25 or 45 minute timer. A small reminder helps you step away. See actual
+              redirects and active inbox time.
+            </p>
+          </article>
+          <article class="feature">
+            <span class="feature-icon" aria-hidden="true">⌂</span>
+            <h3>Your data stays home.</h3>
+            <p>
+              No extension account, message database or analytics. Settings and counters stay in
+              your browser. Login happens on Instagram.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="install" class="install wrap">
+        <div class="install-heading">
+          <p class="eyebrow">A few clicks. A quieter inbox.</p>
+          <h2>Make room for<br />the messages.</h2>
+          <p>
+            This first release installs manually in desktop Chrome or Edge. No subscription. No
+            build commands.
+          </p>
+          <a href="downloads/INSTA_LITE-extension-v1.0.0.zip" download class="button"
+            >Download extension <span aria-hidden="true">↓</span></a
+          >
+          <p class="fine">Version 1.0.0 · Unpacked extension</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <div>
+              <h3>Download &amp; extract</h3>
+              <p>
+                Download the ZIP and choose <strong>Extract All</strong>. Keep the extracted folder
+                somewhere permanent.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <div>
+              <h3>Open your extension settings</h3>
+              <p>
+                Paste <code>chrome://extensions</code> or <code>edge://extensions</code> into your
+                address bar. Turn on <strong>Developer mode</strong>.
+              </p>
+              <button disabled type="button" class="copy" id="copy-address">
+                Copy Chrome address <span aria-hidden="true">⧉</span>
+              </button>
+              <p class="copy-status" id="copy-status" role="status"></p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <div>
+              <h3>Load INSTA_LITE</h3>
+              <p>
+                Choose <strong>Load unpacked</strong> and select the extracted folder containing
+                <code>manifest.json</code>. Pin the extension for easy access.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <div>
+              <h3>Open your messages</h3>
+              <p>
+                Click the extension, then <strong>Open Messages</strong>. Log in on Instagram if
+                needed. Refresh any Instagram tabs you already had open.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="questions wrap" id="questions">
+        <div>
+          <p class="eyebrow">Before you open your inbox</p>
+          <h2>A few good<br />questions.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Does this work with my personal account?</summary>
+            <p>
+              Yes. It works with the Instagram website you already use, including personal accounts.
+              It doesn’t use a messaging API or connect through a separate account.
+            </p>
+          </details>
+          <details>
+            <summary>Will you see my password or messages?</summary>
+            <p>
+              The extension does not collect your credentials, transmit messages or store
+              conversations. It modifies Instagram’s page layout locally. Instagram continues to
+              handle your login and messages.
+            </p>
+          </details>
+          <details>
+            <summary>Can I still reply to people?</summary>
+            <p>
+              Yes, in Full Messaging mode. The default Read + React mode hides composers and blocks
+              common send controls. It is a focus aid, not a security boundary; Instagram layout
+              changes may require updates.
+            </p>
+          </details>
+          <details>
+            <summary>What about reels sent in my DMs?</summary>
+            <p>
+              Shared Instagram post and reel links are hidden by default, and their destination
+              pages redirect to your inbox. Some inline previews may remain if Instagram changes its
+              markup. Regular photo and video attachments can still appear.
+            </p>
+          </details>
+          <details>
+            <summary>Does it work on my phone?</summary>
+            <p>
+              This release is for desktop Chrome and Edge. It does not modify the Instagram mobile
+              app, and it cannot run in Chrome on iPhone.
+            </p>
+          </details>
+          <details>
+            <summary>Can I turn it off?</summary>
+            <p>
+              Yes. Turn off the distraction blocker in the extension popup to use Instagram
+              normally. You can also disable or remove INSTA_LITE from your browser’s extension
+              settings.
+            </p>
+          </details>
+          <details>
+            <summary>Is it ready for the Chrome Web Store?</summary>
+            <p>
+              This is a complete installable first release. Store publication is a separate step
+              with store review. Real-account testing is still needed across Instagram layouts and
+              languages before a wider release.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="last-word wrap">
+        <span class="logo" aria-hidden="true">i.</span>
+        <h2>Less scrolling.<br />More <span>living.</span></h2>
+        <a href="#install" class="button">Make the switch <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <a href="#main" class="brand">INSTA_LITE</a>
+      <p>Independent, open-source project. Not affiliated with Instagram or Meta.</p>
+      <a href="privacy.html">Privacy</a
+      ><a href="downloads/INSTA_LITE-source-v1.0.0.zip" download>Source ↓</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+name: Package V1 preview
+on:
+  push:
+    tags: [v1.0.0]
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      AXE_MODULE: axe-core
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run verify
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - name: Publish installable preview assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            artifacts/INSTA_LITE-extension-v1.0.0.zip \
+            artifacts/INSTA_LITE-source-v1.0.0.zip \
+            artifacts/INSTA_LITE-website-v1.0.0.zip \
+            --verify-tag \
+            --title "INSTA_LITE v1.0.0 — First installable preview" \
+            --notes-file docs/releases/v1.0.0.md \
+            --prerelease

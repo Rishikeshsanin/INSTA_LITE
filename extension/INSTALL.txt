@@ -1,0 +1,18 @@
+INSTA_LITE v1.0.0 — Instagram, without the scroll.
+
+1. Keep this extracted folder in a permanent location.
+2. Open chrome://extensions or edge://extensions.
+3. Turn on Developer mode, click Load unpacked, and select this folder.
+4. Pin INSTA_LITE. Click it and choose Open Messages.
+5. Sign in on Instagram itself and refresh already-open Instagram tabs.
+
+Read + React hides composers. Choose Full Messaging to reply normally.
+Use All settings for theme, counters and privacy information.
+Turn off Distraction blocker to restore normal Instagram browsing.
+
+This release is for desktop Chrome/Edge. It is not yet in an extension store.
+Instagram layout changes can affect composer/reel-link hiding. This is a focus
+aid, not a security boundary. Run the real-account checklist before sharing.
+
+No Instagram credentials or message bodies are collected or stored.
+Independent project; not affiliated with Instagram or Meta.
